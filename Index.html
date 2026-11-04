@@ -18,20 +18,24 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 10px 20px 20px;
   font-family: Georgia, serif;
   background: #f7f3eb;
 }
 
 .container {
   width: 100%;
-  max-width: 430px;
+  max-width: 400px;
+  min-height: 85vh;
+  min-height: 85dvh;
   background: white;
-  padding: 35px 25px;
+  padding: 25px 20px;
   border-radius: 18px;
   text-align: center;
   box-shadow: 0 8px 30px #00000012;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -46,14 +50,14 @@ h1 {
   margin-bottom: 30px;
 }
 
-
-
 .foto {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
   border-radius: 12px;
-  margin-bottom: 20px;
 }
 
 input {
@@ -88,7 +92,7 @@ button:hover {
 }
 
 #risultato {
-  margin-top: 25px;
+  margin-top: 10px;
   color: #817665;
 }
 
@@ -98,7 +102,7 @@ button:hover {
   border-radius: 12px;
   color: #a38754;
   font-size: 32px;
-  margin: 15px 0;
+  margin: 5px;
 }
 
 .errore {
@@ -113,7 +117,7 @@ button:hover {
 }
 
 .secondario {
-  margin-top: 10px;
+  margin-top: 4px;
   background: #816565;
 }
 
@@ -177,18 +181,33 @@ button:hover {
 const invitati = [
 
   // TAVOLO 1
-  { nome: "Mario", cognome: "Rossi", tavolo: 1 },
-  { nome: "Marco", cognome: "Bianchi", tavolo: 1 },
-  { nome: "Anna", cognome: "Verdi", tavolo: 1 },
-  { nome: "Anto", cognome: "Neri", tavolo: 1 },
+  { nome: "Mario", cognome: "Ferretti", tavolo: "phyton"},
+  { nome: "Valentino", cognome: "Ferretti", tavolo: "JavaScript"},
+  { nome: "Gianluca", cognome: "Ferretti", tavolo: "HTML"},
+  { nome: "Angela", cognome: "Ferretti", tavolo: "php"},
+  { nome: "Carla", cognome: "Faricciotti", tavolo: "php"},
+  { nome: "Fausto", cognome: "Faricciotti", tavolo: "R"},
+  { nome: "Anto", cognome: "Faricciotti", tavolo: "MATLAB"},
+  { nome: "Ranieri", cognome: "Faricciotti", tavolo: "java"},
 
   // TAVOLO 2
-  { nome: "Ricky", cognome: "Blu", tavolo: 2 },
-  { nome: "Martin", cognome: "Gialli", tavolo: 2 },
-  { nome: "Anna", cognome: "Rossi", tavolo: 2 },
+  { nome: "Emanuela", cognome: "Di felice", tavolo: "MATLAB"},
+  { nome: "Martin", cognome: "Gialli", tavolo: "MATLAB" },
+  { nome: "Marina", cognome: "Faricciotti", tavolo: "MATLAB" },
+  { nome: "Gianluca", cognome: "Ferretti", tavolo: "MATLAB" },
+  { nome: "Valeria", cognome: "Di bacco", tavolo: "MATLAB" },
+  { nome: "Francesca", cognome: "Taglieri", tavolo: "MATLAB" },
+  { nome: "Martina", cognome: "Faris", tavolo: "MATLAB" },
+  
 
   //TAVOLO 3
-  { nome: "Anna", cognome: "Bianchi", tavolo: 3 }
+  { nome: "Stefano", cognome: "Sincic", tavolo: "sql"},
+  { nome: "Alfonso", cognome: "Di loreto", tavolo: "R"},
+  { nome: "Donato", cognome: "Di marco", tavolo: "java" },
+  { nome: "Anna", cognome: "Bianchi", tavolo: "java" },
+  { nome: "Anna", cognome: "Sabbia", tavolo: "java"},
+  { nome: "Annamaria", cognome: "Ferretti", tavolo: "C++" },
+  { nome: "Anna", cognome: "Gialli", tavolo: "java"}
 
 ];
 
@@ -199,12 +218,25 @@ const invitati = [
 
 const fotoTavoli = {
 
-  1: "java.png",
+  "java": "java.png",
 
-  2: "phyton.png",
+  "JavaScript": "JavaScript.webp",
 
-  3: "tavolo3.jpg"
+  "MATLAB":"MATLAB.jpg",
 
+  "R":"R.png",
+
+  "HTML":"HTML.jpg",
+
+  "php":"php.jpg",
+
+  "sql":"sql.jpg",
+
+  "C++":"C++.png",
+
+  "phyton" : "phyton.png"
+
+  
 };
 
 
@@ -421,4 +453,6 @@ function riprovaNome() {
 
 </body>
 </html>
+
+
 
